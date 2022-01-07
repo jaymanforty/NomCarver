@@ -1,0 +1,8 @@
+**/.vscode
+**.yml
+**/__pycache__
+venv
+.env
+**/cfg
+files
+**.db
