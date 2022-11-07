@@ -26,17 +26,6 @@ if not exists("nomcarver.db"):
                 USER    TEXT    NOT NULL,
                 PSSWD   TEXT    NOT NULL);""")
     
-    #Create Table to store Map Pools / maps 
-    conn.execute("""CREATE TABLE map_pools
-                (
-                MAP_POOL_NAME   TEXT    NOT NULL,
-                MAPS            TEXT    NOT NULL);""")
-
-    #Create Table for the penny game
-    conn.execute("""CREATE TABLE pennies
-                (
-                USER_ID         INT     NOT NULL,
-                AMOUNT          INT     NOT NULL);""")
     conn.close()
 
 description = """NomCarver..."""
@@ -49,7 +38,6 @@ bot = commands.Bot(
     command_prefix = os.getenv('PREFIX'),
     intents = intents,
     description=description,
-    test_guilds = [491700910712684554],
     sync_commands = True
 )
 
