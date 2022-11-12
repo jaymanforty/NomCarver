@@ -32,13 +32,11 @@ description = """NomCarver..."""
 
 intents = disnake.Intents.default()
 intents.members = True
-
+commands_sync_flags = commands.CommandSyncFlags(sync_commands=True)
 #Define the bot
-bot = commands.Bot(
-    command_prefix = os.getenv('PREFIX'),
+bot = commands.InteractionBot(
     intents = intents,
-    description=description,
-    sync_commands = True
+    command_sync_flags = commands_sync_flags
 )
 
 #Load the cogs into the bot from the directory
