@@ -31,7 +31,6 @@ if not exists("nomcarver.db"):
 description = """NomCarver..."""
 
 intents = disnake.Intents.default()
-intents.members = True
 commands_sync_flags = commands.CommandSyncFlags(sync_commands=True)
 #Define the bot
 bot = commands.InteractionBot(
