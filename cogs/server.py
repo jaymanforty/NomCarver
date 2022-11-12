@@ -105,6 +105,7 @@ class Server(commands.Cog):
 
     #/server parent command
     @commands.slash_command(name="server")
+    @commands.default_member_permissions(manage_messages=True)
     async def server(self, ctx: disnake.ApplicationCommandInteraction):
         pass
 
@@ -114,7 +115,6 @@ class Server(commands.Cog):
         name = "add",
         description = "Add a server to the list able to query from"
     )
-    @has_guild_permissions(disnake.Permissions.manage_messages)
     async def server_add(
         self, 
         ctx: disnake.ApplicationCommandInteraction,
