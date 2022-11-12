@@ -144,7 +144,7 @@ class Server(commands.Cog):
 
         cursor.execute(f'''INSERT INTO servers VALUES (?, ?, ?, ?, ?)''', params)
 
-        await ctx.send("Added server details. Try **/serverinfo** command")
+        await ctx.send("Added server details. Try **/serverinfo** command", ephemeral=True)
 
         conn.commit()
         conn.close()
